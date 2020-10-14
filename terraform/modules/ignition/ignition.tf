@@ -91,7 +91,6 @@ data "ignition_systemd_unit" "node-exporter" {
 }
 
 data "ignition_file" "eco-config" {
-  filesystem = "root"
   path       = "/etc/eco/config.yaml"
   mode       = 420
 
@@ -101,7 +100,6 @@ data "ignition_file" "eco-config" {
 }
 
 data "ignition_file" "eco-ca" {
-  filesystem = "root"
   path       = "/etc/eco/ca.crt"
   mode       = 420
 
@@ -111,7 +109,6 @@ data "ignition_file" "eco-ca" {
 }
 
 data "ignition_file" "eco-crt" {
-  filesystem = "root"
   path       = "/etc/eco/eco.crt"
   mode       = 420
 
@@ -121,7 +118,6 @@ data "ignition_file" "eco-crt" {
 }
 
 data "ignition_file" "eco-key" {
-  filesystem = "root"
   path       = "/etc/eco/eco.key"
   mode       = 420
 
@@ -131,7 +127,6 @@ data "ignition_file" "eco-key" {
 }
 
 data "ignition_file" "e" {
-  filesystem = "root"
   path       = "/opt/bin/e"
   mode       = 493
 
@@ -141,7 +136,6 @@ data "ignition_file" "e" {
 }
 
 data "ignition_file" "eco-health" {
-  filesystem = "root"
   path       = "/opt/bin/eco-health.sh"
   mode       = 493
 
