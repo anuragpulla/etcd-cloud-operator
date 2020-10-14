@@ -33,14 +33,14 @@ data "ignition_config" "main" {
 
   users = [data.ignition_user.core.rendered]
 
-  append {
+  append [
     source = lookup(
       var.ignition_extra_config,
       "source",
       local.blank_ignition_config,
     )
     verification = lookup(var.ignition_extra_config, "verification", "")
-  }
+  ]
 }
 
 data "ignition_user" "core" {
